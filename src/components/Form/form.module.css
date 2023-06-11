@@ -1,0 +1,140 @@
+.specailOffer_con_inputs input {
+  display: block;
+  border: none;
+  border-bottom: 1px solid #fff;
+  background-color: transparent;
+  padding: 5px 5px;
+  margin: 15px 0;
+  max-width: 260px;
+  width: 100%;
+}
+.hamburger {
+  display: none;
+}
+.checkbox_Con {
+  position: relative;
+  margin-top: 16px;
+  text-align: left;
+}
+.content_check_box {
+  display: inline-block;
+  padding-left: 25px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-family: "Gotham-Bold", sans-serif;
+  color: #4a4f55;
+  font-size: 14px;
+  line-height: 18px;
+  vertical-align: middle;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.content_check_box .checkmark:after {
+  background-color: black;
+  background-image: url(../../../public/check.svg);
+  background-size: 10px;
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 16px;
+  width: 16px;
+  background-color: #fff;
+  border: 1px solid #ca251b;
+  border-radius: 5px;
+}
+.content_check_box input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.content_check_box input:checked ~ .checkmark {
+  background-color: pink;
+  border-color: #ca251b;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.content_check_box input:checked ~ .checkmark:after {
+  display: block;
+}
+.getMoreInfo {
+  background: linear-gradient(87deg, #5a4bda, #eb427e) !important;
+  margin-top: 30px;
+  width: 170px;
+  padding: 10px;
+  border: 0px;
+  border-radius: 50px;
+  color: #fff;
+}
+.bottom_con,
+.top_con,
+.support_con,
+.specailOffer_con_inputs {
+  display: flex;
+  /* justify-content: center; */
+  gap: 25px;
+}
+.support_con {
+  display: flex;
+  align-items: flex-end;
+  align-content: flex-end;
+}
+.banner_main {
+  display: flex;
+  justify-content: center;
+  background-image: url(https://assignmentwallah.com/wp-content/uploads/2023/02/My-Project.png);
+  background-position: -40px 0px;
+  background-size: cover;
+  color: #fff;
+
+  /* transition: background 0.3s, border-radius 0.3s, opacity 0.3s; */
+}
+.sub_main {
+  max-width: 1200px;
+  width: 100%;
+  margin: 15px;
+}
+
+.input_con,
+.support_con,
+.form_con {
+  width: 50%;
+}
+
+.form_headings {
+  text-align: center;
+}
+.form {
+  margin: 10px 50px;
+  padding: 14px 15px;
+}
+.List {
+  width: 100%;
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: auto auto auto;
+  gap: 10px;
+}
+
+.banner_main {
+  background-color: #ff6302;
+}
+.input_con {
+  text-align: left;
+}

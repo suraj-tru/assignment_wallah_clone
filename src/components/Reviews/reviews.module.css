@@ -1,0 +1,17 @@
+.main_con {
+  display: flex;
+  justify-content: center;
+}
+.review_head{
+    display: flex;
+justify-content: space-between;
+}
+.sub_con {
+  max-width: 1200px;
+}
+.review_cards_con {
+  display: grid;
+
+  grid-template-rows: auto auto;
+  grid-template-columns: auto auto;
+}

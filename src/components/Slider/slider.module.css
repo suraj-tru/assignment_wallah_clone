@@ -1,0 +1,19 @@
+.image_con {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+.slick-next:before {
+  content: "←";
+  color: linear-gradient(87deg, #5a4bda, #eb427e) !important;
+}
+.slick-prev:before {
+  content: "→";
+  color: linear-gradient(87deg, #5a4bda, #eb427e) !important;
+}
+@media screen and (max-width: 1080px) {
+  .image_con img {
+    height: 228px;
+    width: 228px;
+  }
+}

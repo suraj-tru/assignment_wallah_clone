@@ -1,0 +1,24 @@
+.mian_con {
+  display: flex;
+  justify-content: center;
+}
+.sub_con {
+  max-width: 1200px;
+  display: flex;
+}
+.accordion_title,
+.accordion_con {
+  max-width: 600px;
+  width: 100%;
+}
+.accordion{
+    width: 100%;
+}
+.image_box {
+  background-image: url(https://assignmentwallah.com/wp-content/uploads/2022/09/books-2596809_960_720.webp);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 500px;
+  width: 540px;
+    margin: 0 30px;
+}

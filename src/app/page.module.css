@@ -1,229 +1,481 @@
-.main {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding: 6rem;
-  min-height: 100vh;
+/* fonts classes */
+.heading_h2 {
+  margin: 0;
+  font-size: 42px;
+  line-height: 52px;
 }
-
-.description {
-  display: inherit;
-  justify-content: inherit;
-  align-items: inherit;
-  font-size: 0.85rem;
-  max-width: var(--max-width);
+.num_font {
+  margin: 0;
+  font-size: 90px;
+  line-height: 90px;
+}
+.paragraph {
+  margin: 0;
+  font-size: 15px;
+  line-height: 18px;
+}
+.heading_h3 {
+  margin: 0;
+  font-size: 18px;
+  line-height: 24px;
+}
+.specailOffer_con_inputs input {
+  display: block;
+  border: none;
+  border-bottom: 1px solid #fff;
+  background-color: transparent;
+  padding: 5px 5px;
+  margin: 15px 0;
+  max-width: 260px;
   width: 100%;
-  z-index: 2;
-  font-family: var(--font-mono);
 }
-
-.description a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
+.hamburger {
+  display: none;
 }
-
-.description p {
+.checkbox_Con {
   position: relative;
-  margin: 0;
-  padding: 1rem;
-  background-color: rgba(var(--callout-rgb), 0.5);
-  border: 1px solid rgba(var(--callout-border-rgb), 0.3);
-  border-radius: var(--border-radius);
+  margin-top: 16px;
+  text-align: left;
 }
-
-.code {
-  font-weight: 700;
-  font-family: var(--font-mono);
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(25%, auto));
-  width: var(--max-width);
-  max-width: 100%;
-}
-
-.card {
-  padding: 1rem 1.2rem;
-  border-radius: var(--border-radius);
-  background: rgba(var(--card-rgb), 0);
-  border: 1px solid rgba(var(--card-border-rgb), 0);
-  transition: background 200ms, border 200ms;
-}
-
-.card span {
+.content_check_box {
   display: inline-block;
-  transition: transform 200ms;
+  padding-left: 25px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-family: "Gotham-Bold", sans-serif;
+  color: #fff;
+
+  font-size: 12px;
+  line-height: 14px;
+  vertical-align: middle;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.content_check_box .checkmark:after {
+  background-color: #0075ff;
+  background-image: url(../../public/check.svg);
+  background-size: 10px;
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 5px;
+}
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 16px;
+  width: 16px;
+  background-color: #fff;
+  border: 1px solid #0075ff;
+  border-radius: 5px;
+}
+.content_check_box input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.content_check_box input:checked ~ .checkmark {
+  background-color: #0075ff;
+  border-color: #0075ff;
 }
 
-.card h2 {
-  font-weight: 600;
-  margin-bottom: 0.7rem;
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
 }
 
-.card p {
-  margin: 0;
-  opacity: 0.6;
-  font-size: 0.9rem;
-  line-height: 1.5;
-  max-width: 30ch;
+.content_check_box input:checked ~ .checkmark:after {
+  display: block;
 }
-
-.center {
+.getMoreInfo {
+  background: linear-gradient(87deg, #5a4bda, #eb427e) !important;
+  margin-top: 30px;
+  width: 170px;
+  padding: 10px;
+  border: 0px;
+  border-radius: 50px;
+  color: #fff;
+}
+.bottom_con,
+.top_con,
+.support_con,
+.specailOffer_con_inputs {
   display: flex;
   justify-content: center;
-  align-items: center;
-  position: relative;
-  padding: 4rem 0;
+  gap: 25px;
+  margin-bottom: 30px;
+}
+.support_con {
+  display: flex;
+  align-items: flex-end;
+  align-content: flex-end;
+}
+.banner_main {
+  display: flex;
+  justify-content: center;
+  background-image: url(https://assignmentwallah.com/wp-content/uploads/2023/02/My-Project.png);
+  /* background-position: -40px 0px  */
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+
+  /* transition: background 0.3s, border-radius 0.3s, opacity 0.3s; */
+}
+.sub_main {
+  max-width: 1200px;
+  width: 100%;
+  margin: 15px;
+}
+.support_con {
+  width: 40%;
+}
+.input_con {
+  width: 100%;
 }
 
-.center::before {
-  background: var(--secondary-glow);
-  border-radius: 50%;
-  width: 480px;
-  height: 360px;
-  margin-left: -400px;
+.form_con {
+  width: 60%;
 }
 
-.center::after {
-  background: var(--primary-glow);
-  width: 240px;
-  height: 180px;
-  z-index: -1;
+.form_heading_con {
+  text-align: center;
 }
-
-.center::before,
-.center::after {
-  content: '';
-  left: 50%;
-  position: absolute;
-  filter: blur(45px);
-  transform: translateZ(0);
+.form {
+  margin: 10px 50px;
+  padding: 14px 15px;
+  background-color: #ffffff2e;
 }
-
-.logo {
-  position: relative;
+.List {
+  width: 100%;
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: auto auto auto;
+  gap: 10px;
 }
-/* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-  .card:hover {
-    background: rgba(var(--card-rgb), 0.1);
-    border: 1px solid rgba(var(--card-border-rgb), 0.15);
+.block {
+  display: block;
+}
+.bold {
+  font-weight: 600;
+}
+/* .banner_main {
+  background-color: #000;
+  opacity: 0.9;
+} */
+.input_con {
+  text-align: left;
+}
+@media screen and (max-width: 1030px) {
+  .top_con {
+    flex-flow: column-reverse;
+  }
+  .content,
+  .input_con,
+  .support_con,
+  .form_con {
+    width: 100% !important;
+  }
+  .support_con {
+    justify-content: center;
   }
 
-  .card:hover span {
-    transform: translateX(4px);
+  .specailOffer_con_inputs input {
+    max-width: 360px;
+  }
+  .specailOffer_con_inputs input:focus {
+    border: none;
+  }
+  .image_Con {
+    display: none;
+  }
+  .sub_con,
+  .header_col {
+    max-width: 767px !important;
+  }
+  .doubts_img_con {
+    width: 700px;
+    height: 400px;
+  }
+
+  .images_con img {
+    height: 96px;
+    width: 96px;
   }
 }
-
-@media (prefers-reduced-motion) {
-  .card:hover span {
-    transform: none;
+@media screen and (max-width: 767px) {
+  .support_con,
+  .form,
+  .form_headings {
+    display: none;
   }
-}
-
-/* Mobile */
-@media (max-width: 700px) {
-  .content {
-    padding: 4rem;
+  .image_boxs,
+  .accordion_con {
+    width: 100% !important;
+  }
+  .image_boxs {
+    width: 305px;
+    height: 280px;
+  }
+  .sub_main {
+    width: unset;
   }
 
-  .grid {
-    grid-template-columns: 1fr;
-    margin-bottom: 120px;
-    max-width: 320px;
+  .List {
+    display: inline;
+  }
+  .faqs_con,
+  .ratings,
+  .review_head,
+  .rowCon {
+    /* align-items: flex-start; */
+    flex-flow: column;
+  }
+  .content_con {
+    max-width: unset !important;
+  }
+  .btn_con {
     text-align: center;
   }
-
-  .card {
-    padding: 1rem 2.5rem;
+  .sub_con {
+    max-width: 480px;
   }
-
-  .card h2 {
-    margin-bottom: 0.5rem;
-  }
-
-  .center {
-    padding: 8rem 0 6rem;
-  }
-
-  .center::before {
-    transform: none;
-    height: 300px;
-  }
-
-  .description {
-    font-size: 0.8rem;
-  }
-
-  .description a {
-    padding: 1rem;
-  }
-
-  .description p,
-  .description div {
-    display: flex;
-    justify-content: center;
-    position: fixed;
+  .doubts_img_con {
     width: 100%;
+    height: 220px;
   }
-
-  .description p {
-    align-items: center;
-    inset: 0 0 auto;
-    padding: 2rem 1rem 1.4rem;
-    border-radius: 0;
-    border: none;
-    border-bottom: 1px solid rgba(var(--callout-border-rgb), 0.25);
-    background: linear-gradient(
-      to bottom,
-      rgba(var(--background-start-rgb), 1),
-      rgba(var(--callout-rgb), 0.5)
-    );
-    background-clip: padding-box;
-    backdrop-filter: blur(24px);
+  .review_cards_con,
+  .images_con {
+    display: unset !important;
   }
-
-  .description div {
-    align-items: flex-end;
-    pointer-events: none;
-    inset: auto 0 0;
-    padding: 2rem;
-    height: 200px;
-    background: linear-gradient(
-      to bottom,
-      transparent 0%,
-      rgb(var(--background-end-rgb)) 40%
-    );
-    z-index: 1;
+  .images_con img {
+    width: 280px;
+    height: 280px;
   }
-}
-
-/* Tablet and Smaller Desktop */
-@media (min-width: 701px) and (max-width: 1120px) {
-  .grid {
-    grid-template-columns: repeat(2, 50%);
+  .heading_h2 {
+    margin: 0;
+    font-size: 22px;
+    line-height: 28px;
+  }
+  .num_font {
+    margin: 0;
+    font-size: 65px;
+    line-height: 65px;
+  }
+  .paragraph {
+    margin: 0;
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .heading_h3 {
+    margin: 0;
+    font-size: 18px;
+    line-height: 24px;
   }
 }
-
-@media (prefers-color-scheme: dark) {
-  .vercelLogo {
-    filter: invert(1);
-  }
-
-  .logo {
-    filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
-  }
+/* banner 2*/
+.container {
+  padding: 50px 25px;
+}
+.main_Containe {
+  display: flex;
+  justify-content: center;
 }
 
-@keyframes rotate {
-  from {
-    transform: rotate(360deg);
-  }
-  to {
-    transform: rotate(0deg);
-  }
+.header_col {
+  display: flex;
+  width: 100%;
+}
+.header_col {
+  max-width: 1200px;
+}
+.image_Con {
+  width: 40%;
+  background-image: url(https://assignmentwallah.com/wp-content/uploads/2022/10/professional-1.png);
+  background-repeat: no-repeat;
+}
+.content {
+  width: 60%;
+}
+.rowCon {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  max-width: 1320px;
+}
+.fadeInUp {
+    margin: 10px 0;
+  padding: 0 12px;
+}
+.content_con {
+  max-width: 210px;
+  padding: 5px;
+}
+.service_item {
+  background-color: #f0fbfc;
+  padding-top: 10px;
+  transition: 0.5s;
+}
+.service_item:hover {
+  margin-top: -10px;
+  background-color: #051d3a;
+  color: white;
+  border-bottom: 5px solid #ff6302;
+}
+.getMoreInfo {
+  background: linear-gradient(87deg, #5a4bda, #eb427e) !important;
+  margin-top: 30px;
+  width: 170px;
+  padding: 10px;
+  border: 0px;
+  border-radius: 50px;
+  color: #fff;
+}
+/* technologies */
+
+/* help */
+.main_con {
+  display: flex;
+  justify-content: center;
+}
+.sub_con {
+  padding: 50px 25px;
+  max-width: 1200px;
+  text-align: center;
+  width: 100%;
+}
+.getMoreInfo {
+  background: linear-gradient(87deg, #5a4bda, #eb427e) !important;
+  margin-top: 30px;
+  width: 170px;
+  padding: 10px;
+  border: 0px;
+  border-radius: 50px;
+  color: #fff;
+}
+/* universirty */
+.main_con {
+  display: flex;
+  justify-content: center;
+}
+.heading_con {
+  text-align: center;
+  max-width: 1200px;
+}
+.images_con {
+  display: grid;
+  grid-template-rows: auto auto auto auto auto auto;
+  grid-template-columns: auto auto auto auto auto auto;
+  gap: 10px;
+  /* display: flex;
+    justify-content: space-around; */
+}
+.image_box img {
+  border-radius: 50%;
+}
+/* review */
+.bck_color {
+  background-color: #f2f5f7;
+}
+.main_con {
+  display: flex;
+  justify-content: center;
+}
+.review_head {
+  margin: 50px 0;
+  background-color: #e7ebee;
+  display: flex;
+  justify-content: space-between;
+}
+.sub_con {
+  max-width: 1200px;
+}
+.review_head {
+  text-align: left;
+}
+.ratings {
+  display: flex;
+  text-align: left;
+  align-items: center;
+}
+.review_cards_con {
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: auto auto;
+  gap: 10px;
+  text-align: left;
+}
+.review_cards {
+  background-color: #fff;
+  padding: 10px 40px 40px;
+  margin: 10px 10px 80px 10px;
+  border-radius: 10px;
+}
+.review_cards img {
+  margin-top: -40px;
+  border-radius: 10px;
+}
+/* accrodion quiestion */
+.accodion button {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-top: 2px solid #f5f5f5;
+}
+.accodion button:nth-last-child() {
+  border-bottom: 2px solid #f5f5f5;
+}
+.accordion_title span {
+  background-image: url("../../public/plus-solid.svg");
+  height: 16px;
+  width: 16px;
+  background-repeat: no-repeat;
+}
+[aria-expanded="true"] .accordion_title span {
+  background-image: url("../../public/minus-solid.svg");
+}
+.accodion h3 {
+  display: flex;
+  justify-content: space-between;
+}
+.accordion_con {
+  width: 50%;
+}
+.image_boxs {
+  width: 50%;
+  background-image: url(https://assignmentwallah.com/wp-content/uploads/2022/09/books-2596809_960_720.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  height: 430px;
+  margin: 0 30px;
+}
+.faqs_con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+.accordion-body {
+  border: 1px solid #000;
+  border-top: none;
+  border-radius: 2px;
+}
+.whatsapp_con {
+  bottom: 50px;
+  left: 50px;
+  position: fixed;
+}
+.whatsapp_con a img {
+  border-radius: 50%;
+  border: 2px solid transparent;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
 }
